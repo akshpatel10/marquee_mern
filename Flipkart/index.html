@@ -1,0 +1,939 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Header</title>
+    <link rel="stylesheet" href="flipkart.css">
+    <!-- <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/fontawesome.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/sharp-solid.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/sharp-regular.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/sharp-light.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/duotone.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/solid.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/regular.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/light.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/brands.css" />
+
+    <!-- Additional Fontawesome Pro+ Icons for v7.2.0 -->
+
+    <!-- Sharp Duotone -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/sharp-duotone-solid.css" />
+    <!-- Chisel -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/chisel-regular.css" />
+    <!-- Etch -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/etch-solid.css" />
+    <!-- Graphite -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/graphite-thin.css" />
+    <!-- Jelly -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/jelly-regular.css" />
+    <!-- Notdog -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/notdog-solid.css" />
+    <!-- Slab -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/slab-regular.css" />
+    <!-- Thumb Print -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/thumbprint-light.css" />
+    <!-- Utility -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/utility-semibold.css" />
+    <!-- Whiteboard -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/rizmyabdulla/fontawesome-pro@main/releases/v7.2.0/css/whiteboard-semibold.css" />
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  --btn-flipkart-bgcolor: #ffe51f;
+  --btn-default-bgcolor: #f0f0f0;
+  --btn-padding: 8px 16px;
+  --btn-border-radius: 12px;
+  --text-dark: #212121;
+  --text-muted: #555;
+  --blue-accent: #2874f0;
+  --font: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 10rem;
+  max-width: 1400px;
+  font-family: var(--font);
+}
+
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+
+  /* breaks out of the body's side margins so it spans the
+     full viewport width, like the real Flipkart header */
+  width: calc(100% + 20rem);
+  margin-left: -10rem;
+
+  padding: 14px 10rem 0;
+  background: #fff;
+  transition: box-shadow 0.2s ease;
+}
+
+header.is-scrolled {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.nav-pills {
+  display: flex;
+  gap: 10px;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--btn-padding);
+  border: none;
+  border-radius: var(--btn-border-radius);
+  background: var(--btn-default-bgcolor);
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+.pill img {
+  height: 22px;
+}
+.pill-flipkart {
+  background: var(--btn-flipkart-bgcolor);
+}
+
+.pill-minutes {
+  background: #f0f0f0;
+}
+.minutes-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: #db0a5b;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.pill-grocery {
+  background: #eafbea;
+  border: 1px solid #c8ecc8;
+  color: #1c7a1c;
+}
+.pill-grocery i {
+  color: #2fa62f;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.location-pin {
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.location-text {
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+
+.header-middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 10px 0;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--blue-accent);
+  border-radius: 15px;
+  padding: 10px 14px;
+}
+
+.search-icon {
+  color: var(--blue-accent);
+  font-size: 14px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-family: var(--font);
+}
+
+.bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.dropdown,
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.login-dropdown i,
+.cart i {
+  font-size: 16px;
+  color: var(--text-dark);
+}
+
+.chevron {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  overflow-x: auto;
+  color: var(--text-dark);
+  white-space: nowrap;
+  border-bottom: 1px solid #eef0f3;
+  padding-bottom: 2px;
+}
+
+.item-topic {
+  position: relative;
+  margin-top: 1rem;
+  width: 100%;
+  display: grid;
+  /* justify-content: space-between; */
+  overflow-x: scroll;
+  /* gap: 20px; */
+  grid-auto-rows: 80px;
+  grid-auto-flow: column;
+  grid-auto-columns: 100px;
+  /* align-items: flex-start; */
+  /* overflow: visible; */
+  /* padding-bottom: 14px; */
+  overflow-y: hidden;
+  
+  
+
+
+-ms-overflow-style: none;   
+  scrollbar-width: none;      
+}
+
+.item-topic::-webkit-scrollbar {
+  display: none;              /* Chrome, Safari, Opera */
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+  flex-shrink: 0;
+  cursor: pointer;
+  
+}
+
+.icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #f5f5f6;
+  transition: background 0.15s ease;
+}
+
+.item img {
+  height: 22px;
+  width: 22px;
+  object-fit: contain;
+}
+
+.item p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dark);
+  white-space: nowrap;
+}
+
+.item:hover .icon-wrap {
+  background: #ececee;
+}
+
+.item.active .icon-wrap {
+  background: #e8f0fe;
+}
+
+.item.active p {
+  color: var(--blue-accent);
+  font-weight: 700;
+}
+
+.item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 4px;
+  right: 4px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--blue-accent);
+}
+
+
+.main-content {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0px;
+  padding: 0px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-offer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  padding-top: 2px;
+  width: 100%;
+}
+
+.main-offer img {
+  height: auto;
+  width: 100%;
+}
+
+.listings-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.listings-1 img {
+  height: auto;
+  width: 100%;
+  border-radius: 25px;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 12px;
+  background: #fff;
+  min-width: 220px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  border-radius: 4px;
+  z-index: 100;
+  padding: 4px 0;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  transform: rotate(45deg);
+  box-shadow: -2px -2px 4px rgba(0,0,0,0.04);
+}
+
+.dropdown-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: var(--text-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+  color: var(--blue-accent);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.rec-carousel-container {
+  box-sizing: border-box;
+  width: 100%;
+  background: linear-gradient(180deg, #eef5ff 0%, #f9f5ff 100%);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin: 20px 0;
+}
+
+.rec-carousel-title {
+  margin: 0 0 20px 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1.4rem;
+  color: #2c3e50;
+  font-weight: 700;
+}
+.rec-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.rec-carousel-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  width: 100%;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.rec-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.rec-product-card {
+  box-sizing: border-box;
+  flex: 0 0 210px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+  scroll-snap-align: start;
+
+}
+
+.rec-product-card:hover {
+  transform: translateY(-2px);
+}
+
+.rec-image-container {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 12px;
+
+}
+
+.rec-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Card Text Styling */
+.rec-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.rec-category {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.rec-view-store {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a202c;
+  text-decoration: none;
+}
+
+.rec-view-store:hover {
+  color: #0056b3;
+}
+
+
+.rec-next-btn {
+  position: absolute;
+  right: -20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.2rem;
+  color: #4a5568;
+  z-index: 10;
+  padding: 0;
+}
+
+.rec-next-btn:hover {
+  background: #f7fafc;
+  color: #1a202c;
+}
+
+@media (max-width: 600px) {
+  .rec-next-btn {
+    display: none;
+  }
+  .rec-carousel-container {
+    padding: 16px;
+  }
+}
+
+.site-footer {
+  box-sizing: border-box;
+  background-color: #212121;
+  color: #fff;
+  padding: 40px 0 0 0;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+   width: calc(100% + 20rem);
+  margin-left: -10rem;
+}
+
+.site-footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+}
+
+.site-footer-column {
+  flex: 1;
+  min-width: 150px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.site-footer-heading {
+  color: #878787;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+}
+
+.site-footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer-list li {
+  margin-bottom: 7px;
+}
+
+.site-footer-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.site-footer-list li a:hover {
+  text-decoration: underline;
+}
+
+.site-footer-text {
+  color: #fff;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.site-footer-link {
+  color: #2874f0;
+  text-decoration: none;
+}
+
+
+.site-footer-contact {
+  border-left: 1px solid #454d5e;
+  padding-left: 25px;
+  flex: 1.5;
+}
+
+.site-footer-address {
+  flex: 1.8;
+  padding-left: 25px;
+}
+
+
+.site-footer-socials {
+  margin-top: 24px;
+}
+
+.site-footer-subheading {
+  color: #878787;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.site-footer-social-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.site-footer-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
+  object-fit: contain;
+}
+
+
+.site-footer-bottom {
+  border-top: 1px solid #454d5e;
+  padding: 25px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1240px;
+  margin: 0 auto;
+  gap: 15px;
+}
+
+.site-footer-bottom-links {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.site-footer-bottom-item {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-footer-bottom-item:hover {
+  text-decoration: underline;
+}
+
+.site-footer-bottom-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.site-footer-copyright {
+  color: #fff;
+}
+
+.site-footer-payments {
+  display: flex;
+  align-items: center;
+}
+
+.site-footer-payment-img {
+  max-height: 25px;
+  object-fit: contain;
+}
+
+
+
+
+</style>
+      </head>
+
+<body>
+    <header>
+        <div class="header-top">
+            <div class="nav-pills">
+                <button class="pill pill-flipkart">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/52/44/image/d2ecfddf891a3922.png?q=60" alt="Flipkart Logo">
+                    Flipkart</button>
+                <button class="pill pill-travel">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/58/44/image/7ab4040af860941d.png?q=60" alt="Flipkart Logo">
+                    Travel</button>
+            </div>
+
+            <div class="top-right">
+                <div class="location">
+                    <span class="location-text">Chanakyapuri sector 6 noida , 20321</span>
+                    <span class="chevron">›</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-middle">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for Products, Brands and More">
+            </div>
+
+            <div class="bottom-right">
+                <div class="dropdown">
+                    Aksh <span class="chevron"><i class="fa-regular fa-chevron-down"></i></span>
+                </div>
+                <div class="dropdown">
+                    More <span class="chevron"><i class="fa-regular fa-chevron-down"></i></span>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fa-solid fa-headset"></i> Notification Preferences</a>
+                        <a href="#"><i class="fa-solid fa-user-plus"></i> 24x7 Customer Care</a>
+                        <a href="#"><i class="fa-solid fa-info-circle"></i> Advertise</a>
+                        <a href="#"><i class="fa-solid fa-download"></i> Download App</a>
+                    </div>
+                </div>
+                <div class="cart">Cart</div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="item-topic">
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/all.svg"
+                        alt="For You">
+                    <p>For You</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/fashion.svg"
+                        alt="Fashion">
+                    <p>Fashion</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/mobiles.svg"
+                        alt="Men">
+                    <p>Men</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/electronics.svg"
+                        alt="Electronics">
+                    <p>Electronics</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/beauty.svg"
+                        alt="Beauty">
+                    <p>Beauty Products</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/auto-new.svg"
+                        alt="Two Wheeler">
+                    <p>Two Wheeler</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/toy.svg" alt="Toys">
+                    <p>Toys</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/auto-acc.svg"
+                        alt="Auto Accessories">
+                    <p>Auto Accessories</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/sport.svg"
+                        alt="Sports">
+                    <p>Sports</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/furniture.svg"
+                        alt="Furniture">
+                    <p>Furniture</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/books.svg"
+                        alt="Books">
+                    <p>Books</p>
+                </div>
+                <div class="item"><img
+                        src="https://static-assets-web.flixcart.com/apex-static/images/svgs/L1Nav/food.svg"
+                        alt="Food & Health">
+                    <p>Food & Health</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <hr>
+    </header>
+    <section class="main-content">
+        <div class="main-offer">
+            <img src="https://rukminim1.flixcart.com/fk-p-flap/3200/720/image/6015c703748e7a42.jpg?q=60" alt="Offer 1">
+        </div>
+        <div class="listings-1">
+            <div class="listing-item">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/3200/1560/image/564b9828b6c73c20.png?q=60" alt="Listing 1">
+            </div>
+            <div class="listing-item">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/3200/1560/image/9836554f8455e4b9.png?q=60" alt="Listing 2">
+            </div>
+            <div class="listing-item">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/3200/1560/image/011f8507d005867e.png?q=60" alt="Listing 3">
+            </div>
+    </section>
+
+<div class="rec-carousel-container">
+  <h2 class="rec-carousel-title">Kashyap, still looking for these?</h2>
+  
+  <div class="rec-carousel-wrapper">
+    <div class="rec-carousel-track">
+      
+      <div class="rec-product-card">
+        <div class="rec-image-container">
+          <img src="https://rukminim2.flixcart.com/image/800/800/xif0q/computer/f/j/g/-enriched-transparent-original-imahfthtkkzyazkf.png?q=60" alt="True Wireless">
+        </div>
+        <div class="rec-card-details">
+          <span class="rec-category">True Wireless</span>
+          <a href="#" class="rec-view-store">View Store</a>
+        </div>
+      </div>
+
+      <div class="rec-product-card">
+        <div class="rec-image-container">
+          <img src="https://rukminim2.flixcart.com/image/800/800/xif0q/induction-cook-top/1/x/c/-original-imaheyg2e7b4pmjf.jpeg?q=60" alt="Mobiles">
+        </div>
+        <div class="rec-card-details">
+          <span class="rec-category">Mobiles</span>
+          <a href="#" class="rec-view-store">View Store</a>
+        </div>
+      </div>
+
+      <div class="rec-product-card">
+        <div class="rec-image-container">
+          <img src="https://rukminim2.flixcart.com/image/800/800/xif0q/cycle/c/n/j/vape-700c-singlespeed-hybrid-bicycle-double-disc-brakes-original-imahmvxzuazybczh.jpeg?q=60" alt="Non Geared Cycles">
+        </div>
+        <div class="rec-card-details">
+          <span class="rec-category">Non Geared Cycles</span>
+          <a href="#" class="rec-view-store">View Store</a>
+        </div>
+      </div>
+
+      <div class="rec-product-card">
+        <div class="rec-image-container">
+          <img src="https://rukminim2.flixcart.com/image/800/800/xif0q/mobile/m/7/c/neo-10-i2405-iqoo-original-imahn6f2zay456bq.jpeg?q=60" alt="Geared Cycles">
+        </div>
+        <div class="rec-card-details">
+          <span class="rec-category">Geared Cycles</span>
+          <a href="#" class="rec-view-store">View Store</a>
+        </div>
+      </div>
+
+      <div class="rec-product-card">
+        <div class="rec-image-container">
+          <img src="https://rukminim2.flixcart.com/image/800/800/xif0q/headphone/0/g/a/-original-imahnq7mrqjb2fr4.jpeg?q=60" alt="Induction Cooktops">
+        </div>
+        <div class="rec-card-details">
+          <span class="rec-category">Induction Cooktops</span>
+          <a href="#" class="rec-view-store">View Store</a>
+        </div>
+      </div>
+
+    </div>
+
+    
+    <button class="rec-next-btn" aria-label="Next items">&#10095;</button>
+  </div>
+</div>
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+
+
